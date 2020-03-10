@@ -1,0 +1,11 @@
+.img-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top-cat__images {
+    max-width: 30rem;
+    max-height: 30rem;
+}

@@ -1,0 +1,173 @@
+.header {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.top-content {
+  background-color: var(--color-primary);
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.text-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10rem;
+}
+
+.top-content img {
+  width: 30px;
+  height: 30px;
+}
+
+.info-text {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.text-section p {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.main-header {
+  margin-top: 10px;
+  display: flex;
+}
+
+.nav-options {
+  display: flex;
+}
+
+.logo {
+  width: 7rem;
+  height: 6.5rem;
+  margin-left: 2rem;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.user__icon-box {
+  padding: 1rem;
+}
+
+.user__icon-box:hover {
+  cursor: pointer;
+}
+
+.vertical-line {
+  margin-left: 1rem;
+  line-height: 1rem;
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.user__icon {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+.user__text {
+  font-size: 1.3rem;
+}
+
+.fa-user-circle {
+  font-size: 3rem;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 1.5rem;
+}
+
+.form-control.input-search {
+  width: 250px;
+  height: 30px;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input {
+  padding: 1rem 2rem;
+  width: 40rem;
+  margin-right: -2.3rem;
+  outline: none;
+  color: #ccc;
+}
+
+.search__btn {
+  border: none;
+  background-color: #fff;
+}
+
+.search__icon {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.user {
+  display: flex;
+}
+
+.header-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  padding: 1rem;
+  color: #fff;
+  height: 5rem;
+  margin: 0 13rem;
+}
+
+.menu {
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0 !important;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu>* {
+  text-decoration: none;
+}
+
+.banner-carousel {
+  position: absolute;
+  top: -4rem;
+  z-index: -10;
+
+}
+
+.carousel-image {
+
+  width: 100vw;
+  height: 70vh;
+}
