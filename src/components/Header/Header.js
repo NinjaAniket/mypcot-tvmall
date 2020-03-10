@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
-import { Form, FormControl, Carousel } from 'react-bootstrap';
+
+import { Carousel } from 'react-bootstrap';
+import Loader from '../Loader/Loader';
+
+import axios from 'axios';
+
 const Header = () => {
   const [isLoading, setLoading] = useState(false);
   const [bannerImages, setBannerImages] = useState([]);
 
-  const apiUrl = 'http://demo7240682.mockable.io/hardtrek';
+  const apiUrl = 'http://demo7240682.mockable.io/banner-images';
   useEffect(() => {
-    fetch(`${apiUrl}`)
-      .then(res => res.json())
-      .then(response => {
-        // console.log(response.map(item => item.imageUri));
-        let data = response.map(item => item.imageUri);
-        setBannerImages(data);
-        console.log(bannerImages);
-      });
+    const fetchData = async () => {
+      const result = await axios(`${apiUrl}`);
+      setBannerImages(result.data);
+    };
+    fetchData();
+
+    setTimeout(() => {
+      setLoading(true);
+    }, 3000);
+    if (bannerImages.length >= 0) {
+      setLoading(true);
+    }
   }, []);
 
   return (
@@ -74,29 +83,21 @@ const Header = () => {
           <li className="menu-links">clearance</li>
         </ul>
       </div>
-      <Carousel className="banner-carousel">
-        <Carousel.Item>
-          <img
-            src="https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            alt="First slide"
-            className="carousel-image"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src="https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            alt="Third slide"
-            className="carousel-image"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="carousel-image"
-            src="https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-      </Carousel>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Carousel className="banner-carousel">
+          {bannerImages.map(images => (
+            <Carousel.Item key={images.id}>
+              <img
+                src={images.imageUri}
+                alt={images.imageUri}
+                className="carousel-image"
+              />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      )}
     </>
   );
 };
