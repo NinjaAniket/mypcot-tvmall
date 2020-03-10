@@ -1,11 +1,38 @@
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+.btn.btn-primary.next-prev__btn {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-divider {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+.top-categories__container {
+  padding: 4rem 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.arrows-icon {
+  font-size: 2rem;
+}
 .img-area {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 .top-cat__images {
-    max-width: 30rem;
-    max-height: 30rem;
+  max-width: 30rem;
+  max-height: 30rem;
 }

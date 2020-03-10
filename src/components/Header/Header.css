@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.banner-images {
+  height: 90vh;
+}
+
 .top-content {
   background-color: var(--color-primary);
   display: flex;
@@ -167,5 +171,5 @@
 
 .carousel-image {
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
 }

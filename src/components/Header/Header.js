@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 
+import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import Loader from '../Loader/Loader';
-
-import axios from 'axios';
-
 const Header = () => {
   const [isLoading, setLoading] = useState(false);
   const [bannerImages, setBannerImages] = useState([]);
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   const apiUrl = 'http://demo7240682.mockable.io/banner-images';
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(`${apiUrl}`);
-      setBannerImages(result.data);
+      try {
+        const result = await axios(`${apiUrl}`);
+        setBannerImages(result.data);
+        if (bannerImages.length) {
+          setLoading(false);
+        }
+      } catch (err) {
+        setLoading(true);
+        console.log(err);
+      }
     };
     fetchData();
-
-    setTimeout(() => {
-      setLoading(true);
-    }, 3000);
-    if (bannerImages.length >= 0) {
-      setLoading(true);
-    }
   }, []);
 
   return (
@@ -83,10 +88,16 @@ const Header = () => {
           <li className="menu-links">clearance</li>
         </ul>
       </div>
+
       {isLoading ? (
         <Loader />
       ) : (
-        <Carousel className="banner-carousel">
+        <Carousel
+          className="banner-carousel"
+          activeIndex={index}
+          onSelect={handleSelect}
+          indicators={false}
+        >
           {bannerImages.map(images => (
             <Carousel.Item key={images.id}>
               <img
