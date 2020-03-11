@@ -12,7 +12,6 @@ const NewProduct = () => {
     const lastIndex = images.length - 1;
     const resetIndex = currentImageIndex === 0;
     const imgIndex = resetIndex ? lastIndex : currentImageIndex - 1;
-
     setCurrentImageIndex(imgIndex);
   };
 
@@ -78,6 +77,7 @@ const NewProduct = () => {
                   <p className="prod-name">{image.info}</p>
                   <p className="quantity-text">{image.quantity}</p>
                   <span className="price-text">&#8364; {image.price}</span>
+
                   <span className="del-price">
                     <strike>&#8364; 99.99</strike>
                   </span>
@@ -86,10 +86,7 @@ const NewProduct = () => {
 
               <div className="col-sm">
                 <div className="card border-0 shadow new-prod__image-card">
-                  <span className="new-prod__text">
-                    New <br />
-                    Products
-                  </span>
+                  <span className="new-prod__text">New Products</span>
                   <img
                     className="card-img-top new-prod__image"
                     src="https://images.pexels.com/photos/1277939/pexels-photo-1277939.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
