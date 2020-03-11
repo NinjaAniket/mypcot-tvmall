@@ -1,0 +1,13 @@
+.streaming-wrapper {
+  /* background: url('../../assets/pattern.jpg') no-repeat; */
+  width: 80vw;
+  height: 80vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.streaming-container {
+  padding: 10rem;
+}

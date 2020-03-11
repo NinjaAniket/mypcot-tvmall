@@ -1,0 +1,60 @@
+.shopping-experience {
+  background-color: var(--color-primary);
+}
+.main-heading {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  width: 80%;
+}
+
+.right-section,
+.left-section {
+  padding: 5rem;
+}
+
+.detail-text {
+  width: 80%;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.color-text {
+  color: #ccc;
+}
+
+.available-text {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.dstv-img {
+  width: 20rem;
+  height: 10rem;
+}
+
+.youtube-img {
+  width: 20rem;
+  height: 5rem;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.channel-no {
+  width: 30%;
+  height: 3rem;
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  background-color: #353631;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-section {
+  display: flex;
+}
