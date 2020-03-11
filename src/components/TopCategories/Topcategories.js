@@ -1,22 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Topcategories.css';
 import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 const Topcategories = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setLoading] = useState(false);
-  const [images, setImages] = useState([
-    // 'https://via.placeholder.com/200x150?text=first',
-    // 'https://via.placeholder.com/200x150?text=second',
-    // 'https://via.placeholder.com/200x150?text=third',
-    // 'https://via.placeholder.com/200x150?text=fourth',
-    // 'https://via.placeholder.com/200x150?text=fifth',
-    // 'https://via.placeholder.com/200x150?text=sixth',
-    // 'https://via.placeholder.com/200x150?text=seventh',
-    // 'https://via.placeholder.com/200x150?text=eighth',
-    // 'https://via.placeholder.com/200x150?text=ninth',
-    // 'https://via.placeholder.com/200x150?text=tenth'
-  ]);
+  const [images, setImages] = useState([]);
 
   const prevSlide = () => {
     const lastIndex = images.length - 1;
@@ -70,29 +60,36 @@ const Topcategories = () => {
           </span>
         </button>
       </div>
-
-      <button type="button" className="view-all__btn">
-        View All
-        <span>
-          <i className="fas fa-angle-right view-all__icon" />
-        </span>
-      </button>
-
-      <div className="container">
-        <div className="row">
-          {firstFourImage.map(image => (
-            <div className="col-sm">
-              <div className="card border-0 shadow image-card" key={image.id}>
-                <img
-                  className="card-img-top top-cat__images"
-                  src={image.imageUri}
-                  alt="img"
-                />
-              </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <button type="button" className="view-all__btn">
+            View All
+            <span>
+              <i className="fas fa-angle-right view-all__icon" />
+            </span>
+          </button>
+          <div className="container">
+            <div className="row">
+              {firstFourImage.map(image => (
+                <div className="col-sm">
+                  <div
+                    className="card border-0 shadow image-card"
+                    key={image.id}
+                  >
+                    <img
+                      className="card-img-top top-cat__images"
+                      src={image.imageUri}
+                      alt="img"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
