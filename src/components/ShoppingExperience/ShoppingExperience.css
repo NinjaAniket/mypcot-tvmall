@@ -1,6 +1,7 @@
 .shopping-experience {
   background-color: var(--color-primary);
 }
+
 .main-heading {
   font-size: 5rem;
   font-weight: bold;
@@ -36,7 +37,7 @@
 }
 
 .youtube-img {
-  width: 20rem;
+  width: 18rem;
   height: 5rem;
   margin: auto;
   border-radius: 1rem;

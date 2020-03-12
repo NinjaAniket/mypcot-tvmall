@@ -1,7 +1,11 @@
 import React from 'react';
 import './Button.css';
-const Button = ({ children }) => {
-  return <div className="reusable-btn">{children}</div>;
+const Button = ({ children, ...otherprops }) => {
+  return (
+    <div className="reusable-btn" style={{ ...otherprops }}>
+      {children}
+    </div>
+  );
 };
 
 export default Button;
