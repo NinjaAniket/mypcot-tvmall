@@ -1,0 +1,50 @@
+.navbar {
+  background: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  padding: 0 !important;
+  height: 100%;
+}
+
+.navbar ul {
+  margin: 0 !important;
+}
+
+.navbar ul li {
+  display: inline-block;
+  height: 100% !important;
+}
+
+.navbar ul li a {
+  line-height: 4rem;
+  display: block;
+}
+.navbar > * {
+  height: 100%;
+}
+.navbar li:hover {
+  background: blue;
+}
+
+ul > li {
+  margin: 0 !important;
+}
+.list-group a {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.list-group a:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.list-group a span {
+  margin-top: 0.8rem;
+}
+
+.navbar .nav-item .nav-link {
+  color: #eee !important;
+}

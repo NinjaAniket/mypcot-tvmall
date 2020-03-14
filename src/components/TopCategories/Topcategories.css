@@ -55,6 +55,7 @@ h1 {
   height: 40vh;
   object-fit: cover;
 }
+
 .col-sm:nth-child(3)::before {
   opacity: 0.8;
   content: '';
@@ -118,4 +119,16 @@ h1 {
 
 .todays-deal {
   background-color: var(--color-white-smoke);
+}
+
+@media (max-width: 992px) {
+  .view-all__btn {
+    display: none;
+  }
+  .card-img-top {
+    margin-top: 1rem;
+  }
+  .btn.btn-primary.next-prev__btn {
+    display: none;
+  }
 }

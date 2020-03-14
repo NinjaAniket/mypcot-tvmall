@@ -90,3 +90,14 @@
 .product-info {
   margin-top: 0.8rem;
 }
+
+@media (max-width: 992px) {
+  .new-prod__text {
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+  }
+
+  .next-prev__btn-new-prod {
+    display: none;
+  }
+}
