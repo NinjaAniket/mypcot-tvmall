@@ -32,8 +32,7 @@ const Topcategories = () => {
     );
   }
 
-  // const topCategoriesUrl = process.env.REACT_APP_API_URL;
-  const topCategoriesUrl = 'https://demo7240682.mockable.io/topcategories';
+  const topCategoriesUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
