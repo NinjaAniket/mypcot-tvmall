@@ -7,13 +7,11 @@ import TodaysDeal from '../components/TodaysDeal/TodaysDeal';
 import Streaming from '../components/Streaming/Streaming';
 import ShoppingExperience from '../components/ShoppingExperience/ShoppingExperience';
 import Footer from '../components/Footer/Footer';
-import MegaMenu from '../components/test/MegaMenu';
 
 export default function Homepage() {
   return (
     <div>
       <Header />
-
       <Topcategories />
       <NewProduct />
       <Streaming />

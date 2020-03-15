@@ -1,7 +1,5 @@
 .streaming-wrapper {
-  /* background: url('../../assets/pattern.jpg') no-repeat; */
-  width: 80vw;
-  height: 80vh;
+  padding: 8rem;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,5 +7,73 @@
 }
 
 .streaming-container {
-  padding: 10rem;
+  display: flex;
+
+  position: relative;
+}
+
+.live-heading {
+  margin-bottom: 1rem;
+}
+
+.sub-video img::before,
+.main-video::before {
+  opacity: 0.8;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.live-btn,
+.play-btn,
+.play-btn__sub-menu {
+  position: absolute;
+  z-index: 100;
+}
+
+.play-btn {
+  top: 40%;
+  left: 50%;
+}
+
+.live-btn {
+  top: 2%;
+  right: 6%;
+}
+
+.play-btn__sub-menu {
+  top: 30%;
+  left: 40%;
+}
+
+.play-btn__sub-menu img,
+.live-btn img {
+  width: 3rem;
+}
+
+.play-btn__sub-menu:hover,
+.play-btn:hover {
+  cursor: pointer;
+}
+
+.video-content {
+  width: 60rem;
+  height: 30rem;
+}
+
+.sub-video__content {
+  width: 20rem;
+  height: 10rem;
+}
+
+@media (max-width: 992px) {
+  .sub-video__content {
+    width: 15rem;
+  }
 }

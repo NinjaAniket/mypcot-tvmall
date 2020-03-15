@@ -5,9 +5,9 @@ import Button from '../Button/Button';
 const ShoppingExperience = () => {
   return (
     <section className="shopping-experience">
-      <div class="container ">
-        <div class="row">
-          <div class="col-6 left-section">
+      <div className="container ">
+        <div className="row">
+          <div className="col-6 left-section">
             <h1 className="main-heading">
               Africa's complete
               <p className="color-text">shopping experience </p>
@@ -29,7 +29,7 @@ const ShoppingExperience = () => {
               />
             </div>
           </div>
-          <div class="col-6 right-section">
+          <div className="col-6 right-section">
             <p className="detail-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Consequatur neque quo assumenda. Perspiciatis enim accusantium

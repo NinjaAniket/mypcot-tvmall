@@ -32,7 +32,7 @@ const Topcategories = () => {
     );
   }
 
-  const topCategoriesUrl = 'http://demo7240682.mockable.io/topcategories';
+  const topCategoriesUrl = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -73,7 +73,7 @@ const Topcategories = () => {
           <div className="container">
             <div className="row">
               {firstFourImage.map(image => (
-                <div className="col-sm">
+                <div className="col-sm" key={image.id}>
                   <div
                     className="card border-0 shadow image-card"
                     key={image.id}

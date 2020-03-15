@@ -91,6 +91,12 @@
   margin-top: 0.8rem;
 }
 
+@media (max-width: 1058px) {
+  .new-products__actions {
+    right: 10rem;
+  }
+}
+
 @media (max-width: 992px) {
   .new-prod__text {
     font-size: 1.3rem;
