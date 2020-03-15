@@ -33,7 +33,7 @@ const NewProduct = () => {
   }
 
   // const topCategoriesUrl = process.env.REACT_APP_API_URL;
-  const topCategoriesUrl = 'http://demo7240682.mockable.io/topcategories';
+  const topCategoriesUrl = 'https://demo7240682.mockable.io/topcategories';
 
   useEffect(() => {
     const fetchData = async () => {

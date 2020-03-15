@@ -15,7 +15,7 @@ const Header = () => {
     setIndex(selectedIndex);
   };
 
-  const apiUrl = 'http://demo7240682.mockable.io/banner-images';
+  const apiUrl = 'https://demo7240682.mockable.io/banner-images';
 
   useEffect(() => {
     const fetchData = async () => {
